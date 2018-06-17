@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/common/platform_aware_button.dart';
 import 'package:flutter_demo/welcome_view.dart';
 
 void main() => runApp(new MyApp());
@@ -60,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
               // overriding the theme for this text widget
               style: Theme.of(context).textTheme.display3,
             ),
-            new RaisedButton(
+            new PlatformAwareButton(
               child: new Text('Launch Welcome'),
               onPressed: () {
                 Navigator.of(context).pushNamed('/welcome');
